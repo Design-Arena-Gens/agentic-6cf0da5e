@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html,
+  body {
+    @apply min-h-screen bg-slate-950 text-slate-100 antialiased;
+    background-image: radial-gradient(
+        circle at top,
+        rgba(56, 189, 248, 0.18),
+        transparent 45%
+      ),
+      radial-gradient(
+        circle at bottom,
+        rgba(244, 114, 182, 0.16),
+        transparent 50%
+      ),
+      #020617;
+  }
+
+  ::selection {
+    @apply bg-sky-400/40 text-white;
+  }
+}
